@@ -7,7 +7,7 @@ public class Main {
         //static vs/non- static fields and mathod
 
         TasksExercises tasksExercises1 = new TasksExercises();
-        TasksExercises tasksExercises2 = new TasksExercises();
+       /*   TasksExercises tasksExercises2 = new TasksExercises();
         System.out.println("x = " + tasksExercises1.x);
         System.out.println("x = " + tasksExercises2.x);
         System.out.println("y = " + tasksExercises1.y);
@@ -28,7 +28,9 @@ public class Main {
 //        System.out.println(tasksExercises.x);
 //
 //        TasksExercises.circlePerimeter();
-//        System.out.println(TasksExercises.x);
-//
+//        System.out.println(TasksExercises.x);*/
+        tasksExercises1.bMI();
+        tasksExercises1.fizzBuzz();
+        tasksExercises1.primeNumbers();
     }
 }
