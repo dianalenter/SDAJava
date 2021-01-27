@@ -92,19 +92,20 @@ public class TasksExercises {
         }
 
     }
-  //  Write an application that will take a positive number from the user (type int)
+
+    //  Write an application that will take a positive number from the user (type int)
     //  and calculate the Fibonacci number at the indicated index. For example, if the number
     //  equals 5, your program should print the fifth Fibonacci number. In Fibonacci sequence,
     //  each number is the sum of the two preceding ones.
-    public static void fibonacci (){
+    public static void fibonacci() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Give me an integer positive number ");
         int inputNumber = scanner.nextInt();
         int num1 = 0;
         int num2 = 1;
         int fibonacci = 0;
-        for (int i = 1; i<= inputNumber; i++){
-            fibonacci = num1+num2;
+        for (int i = 1; i <= inputNumber; i++) {
+            fibonacci = num1 + num2;
             num1 = num2;
             num2 = fibonacci;
             System.out.println(fibonacci + " ");
@@ -112,4 +113,44 @@ public class TasksExercises {
         System.out.println("\n The number you are looking for in Fibonacci sequence is  " + fibonacci);
     }
 
+    //4.Write an application that gets one positive number (type int) from the user
+    // and calculates a sum of digits of the given number. Hint: to make some operations
+    // on every single digit of the number (digit by digit), you can calculate the remainder
+    // of dividing the number by 10 (to get the value of the last digit) and divide the
+    // number by 10 (to "move" to the next digit).
+    public static void digitSum() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Give me an integer positive number ");
+        int a = scanner.nextInt();
+        int b, sum, temp;
+        b = a;
+        sum = 0;
+        do {
+            temp = a % 10;
+            sum = sum + temp;
+            a = a / 10;
+        }
+        while (a > 0);
+        System.out.println("the sum of digits of the given number  " + b + " = " + sum);
+    }
+
+
+
+
+    //6.Write an application that reads a text from the user (type String) and counts a
+    // percentage of occurrences of a space character.
+    public static void percetageOfOccurrences() {
+        System.out.println("Insert your text");
+        Scanner scanner = new Scanner(System.in);
+        String text = scanner.nextLine();
+        char space = ' ';
+        int counter = 0;
+        for (int i = 0; i < text.length(); i++) {
+            if (text.charAt(i) == space) {
+                counter++;
+            } else continue;
+        }
+        System.out.println("The percentage of occurences of space character is "
+                + ((float) counter * 100 / (float) text.length()) +"%");
+    }
 }
