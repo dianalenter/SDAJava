@@ -29,8 +29,9 @@ public class Main {
 //
 //        TasksExercises.circlePerimeter();
 //        System.out.println(TasksExercises.x);*/
-        tasksExercises1.bMI();
-        tasksExercises1.fizzBuzz();
-        tasksExercises1.primeNumbers();
+//        tasksExercises1.bMI();
+//        tasksExercises1.fizzBuzz();
+//        tasksExercises1.primeNumbers();
+        tasksExercises1.fibonacci();
     }
 }
