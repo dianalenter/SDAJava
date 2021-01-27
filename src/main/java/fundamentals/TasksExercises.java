@@ -7,6 +7,7 @@ public class TasksExercises {
     int x = 10;
     static int y = 1;
     //System.out.println("Hello World");
+    //--------------------------------
     //1.Write an application that will read diameter of a circle (variable of type float) and
     //calculate perimeter of given circle.
     //Firstly, assume π = 3.14. Later, use value of π from built-in Math class.
@@ -20,6 +21,7 @@ public class TasksExercises {
 
     }
 
+    //--------------------------------
     //2 Write an application calculating BMI (Body Mass Index)
     // and checking if itЀs optimal or not. Your application
     // should read two variables: weight (in kilograms, type
@@ -45,6 +47,8 @@ public class TasksExercises {
         }
     }
 
+
+    //--------------------------------
     //3.Write an application that takes a positive number from the user
     // (type int) and writes all numbers from 1 to the given number, each
     // on the next line, with the following changes:
@@ -73,6 +77,7 @@ public class TasksExercises {
 
     }
 
+    //--------------------------------
     //4.Write an application that takes a positive number from the user (type int)
     // and prints all prime numbers greater than 1 and less than the given number.
     public void primeNumbers() {
@@ -93,6 +98,7 @@ public class TasksExercises {
 
     }
 
+    //--------------------------------
     //  Write an application that will take a positive number from the user (type int)
     //  and calculate the Fibonacci number at the indicated index. For example, if the number
     //  equals 5, your program should print the fifth Fibonacci number. In Fibonacci sequence,
@@ -113,6 +119,7 @@ public class TasksExercises {
         System.out.println("\n The number you are looking for in Fibonacci sequence is  " + fibonacci);
     }
 
+    //--------------------------------
     //4.Write an application that gets one positive number (type int) from the user
     // and calculates a sum of digits of the given number. Hint: to make some operations
     // on every single digit of the number (digit by digit), you can calculate the remainder
@@ -135,8 +142,30 @@ public class TasksExercises {
     }
 
 
+    //--------------------------------
+    //NU AM STIUT CUM SA REZOLV!!
+    //5.Write an application that will read texts (variables of the String type) until the user
+// gives the text "Enough!" and then writes the longest of the given texts (not including the
+// text "Enough!"). If the user does not provide any text, write "No text provided".
+//    public static void readTexts() {
+//
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Inesert your text");
+//        String text = scanner.next();
+//        while(text!="Enough"){
+//            for (int i=0;i<text.length();i++){
+//                System.out.println(text);
+//
+//            }
+//            break;
+//        }
+//
+//       }
 
 
+
+
+    //--------------------------------
     //6.Write an application that reads a text from the user (type String) and counts a
     // percentage of occurrences of a space character.
     public static void percetageOfOccurrences() {
@@ -151,6 +180,26 @@ public class TasksExercises {
             } else continue;
         }
         System.out.println("The percentage of occurences of space character is "
-                + ((float) counter * 100 / (float) text.length()) +"%");
+                + ((float) counter * 100 / (float) text.length()) + "%");
+    }
+    //--------------------------------
+    //7. Write an application that "stutters", that is, reads the user's text (type String),
+    // and prints the given text, in which each word is printed twice. For example, for the
+    // input: "This is my test" the application should print "This This is is my my test test".
+
+    public static void stuttersText() {
+        System.out.println("Insert your text");
+        Scanner scanner = new Scanner(System.in);
+        String textLine = scanner.nextLine();
+        String temp = "";
+        for (int i = 0; i < textLine.length(); i++) {
+            if (textLine.charAt(i) == ' ') {
+                System.out.print(temp + " " + temp + " ");
+                temp = "";
+            } else {
+                temp = temp + textLine.charAt(i);
+            }
+        }
+        System.out.println(temp + " " + temp);
     }
 }

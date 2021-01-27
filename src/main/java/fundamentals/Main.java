@@ -29,18 +29,28 @@ public class Main {
 //
 //        TasksExercises.circlePerimeter();
 //        System.out.println(TasksExercises.x);*/
+        //-------------------------------
         //Task 2/silde12
 //        tasksExercises1.bMI();
+        //---------------------------------
         // Task 1/slide13
 //        tasksExercises1.fizzBuzz();
+        //--------------------------------------
         // Task 2/slide13
 //        tasksExercises1.primeNumbers();
+        //--------------------------------------
         // Task 3/slide13
-//        tasksExercises1.fibonacci();
+//       tasksExercises1.fibonacci();
+        //---------------------------------------
         // Task 4/slide13
- //       tasksExercises1.digitSum();
+        //       tasksExercises1.digitSum();
+        //-------------------------------------
         //Task 6/slide13
-tasksExercises1.percetageOfOccurrences();
+        // tasksExercises1.percetageOfOccurrences();
+        //-------------------------------------
+        //Task7/slide13
+//        tasksExercises1.stuttersText();
+   // tasksExercises1.readTexts();
 
     }
 }
