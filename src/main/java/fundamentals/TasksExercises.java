@@ -319,6 +319,17 @@ public class TasksExercises {
         return isPrimeNo;
 
     }
+    private static boolean isPrime4(int nr) {
+        if (nr == 2) return true;
+        if (nr == 0 || nr == 1 || nr % 2 == 0) return false;
+
+        for (int i = 3; i * i <= nr; i += 2) { //verifica radical nr
+            if (nr % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 
 
 }
