@@ -33,8 +33,9 @@ public class Main {
         //Task 2/silde12
 //        tasksExercises1.bMI();
         //---------------------------------
-        // Task 1/slide13
-//        tasksExercises1.fizzBuzz();
+         //Task 1/slide13
+        tasksExercises1.fizzBuzz();
+        tasksExercises1.fizzBuzz1();
         //--------------------------------------
         // Task 2/slide13
 //        tasksExercises1.primeNumbers();
@@ -50,7 +51,9 @@ public class Main {
         //-------------------------------------
         //Task7/slide13
 //        tasksExercises1.stuttersText();
-   // tasksExercises1.readTexts();
+        // tasksExercises1.readTexts();
 
+        //tasksExercises1.printAllPrimeNumbers;
+//        TasksExercises.printAllPrimeNumbers();
     }
 }
