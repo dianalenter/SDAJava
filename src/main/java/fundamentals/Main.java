@@ -34,8 +34,8 @@ public class Main {
 //        tasksExercises1.bMI();
         //---------------------------------
          //Task 1/slide13
-        tasksExercises1.fizzBuzz();
-        tasksExercises1.fizzBuzz1();
+    //    tasksExercises1.fizzBuzz();
+     //   tasksExercises1.fizzBuzz1();
         //--------------------------------------
         // Task 2/slide13
 //        tasksExercises1.primeNumbers();
@@ -55,5 +55,6 @@ public class Main {
 
         //tasksExercises1.printAllPrimeNumbers;
 //        TasksExercises.printAllPrimeNumbers();
+        tasksExercises1.longestWorld2();
     }
 }

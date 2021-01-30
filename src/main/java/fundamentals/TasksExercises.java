@@ -167,20 +167,65 @@ public class TasksExercises {
     //5.Write an application that will read texts (variables of the String type) until the user
 // gives the text "Enough!" and then writes the longest of the given texts (not including the
 // text "Enough!"). If the user does not provide any text, write "No text provided".
-//    public static void readTexts() {
-//
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Inesert your text");
-//        String text = scanner.next();
-//        while(text!="Enough"){
-//            for (int i=0;i<text.length();i++){
-//                System.out.println(text);
-//
-//            }
-//            break;
-//        }
-//
-//       }
+
+    public static void longestWorld() {
+        System.out.println("Type your world: ");
+        Scanner scanner = new Scanner(System.in);
+        String word = "";
+        String longestWorld1 = "";
+        do {
+            word = scanner.next();
+            if (!word.equals("Enough") && longestWorld1.length() < word.length()) {
+                longestWorld1 = word;
+            }
+        } while (!word.equals("Enough"));
+        if (longestWorld1.length() == 0) {
+            System.out.println("No text provide ");
+            return;
+        }
+        System.out.println("The longest word is " + longestWorld1);
+
+    }
+
+//sau
+    public static void longestWorld1() {
+        System.out.println("Type your world: ");
+        Scanner scanner = new Scanner(System.in);
+        String word = "";
+        String longestWorld1 = "";
+        do {
+            word = scanner.next();
+            if (longestWorld1.length() < word.length() && !word.equals("Enough")) {
+                longestWorld1 = word;
+            }
+        } while (!word.equals("Enough"));
+        if (longestWorld1.length() == 0) {
+            System.out.println("No text provide ");
+            return;
+        }
+        System.out.println("The longest word is " + longestWorld1);
+
+    }
+//sau
+
+    public static void longestWorld2() {
+        System.out.println("Type your world: ");
+        Scanner scanner = new Scanner(System.in);
+        String word = "";
+        String longestWorld1 = "";
+        while (!word.equals("Enough")) {
+            if (longestWorld1.length() < word.length()) {
+                longestWorld1 = word;
+            }
+            word = scanner.next();
+        }
+        if (longestWorld1.length() == 0) {
+            System.out.println("No text provide ");
+            return;
+        }
+        System.out.println("The longest word is: " + longestWorld1);
+
+    }
 
 
     //--------------------------------
