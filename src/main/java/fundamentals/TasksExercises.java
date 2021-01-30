@@ -237,7 +237,7 @@ public class TasksExercises {
             }
         }
 
-        System.out.println("a");
+        //  System.out.println("a");
     }
 
     private static boolean isPrime(int nr) {
@@ -275,5 +275,18 @@ public class TasksExercises {
 
     }
 
-
+    private static boolean isPrime3(int nr) {
+        if (nr == 2) {
+            return true;
+        }
+        if (nr % 2 == 0 || nr == 1 || nr == 1) {
+            return false;
+        }
+        for (int i = 3; i * i <= nr; i += 2) {
+            if (nr % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
