@@ -55,6 +55,9 @@ public class Main {
 
         //tasksExercises1.printAllPrimeNumbers;
 //        TasksExercises.printAllPrimeNumbers();
-        tasksExercises1.printAllPrimeNumbers();
+ //       tasksExercises1.printAllPrimeNumbers();
+  //      tasksExercises1.stutters();
+  //      tasksExercises1.testString();
+        tasksExercises1.testObjects();
     }
 }

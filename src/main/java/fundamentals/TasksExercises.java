@@ -169,7 +169,7 @@ public class TasksExercises {
 // text "Enough!"). If the user does not provide any text, write "No text provided".
 //    public static void readTexts() {
 //
-        public static void longestWorld() {
+    public static void longestWorld() {
         System.out.println("Type your world: ");
         Scanner scanner = new Scanner(System.in);
         String word = "";
@@ -188,7 +188,7 @@ public class TasksExercises {
 
     }
 
-//sau
+    //sau
     public static void longestWorld1() {
         System.out.println("Type your world: ");
         Scanner scanner = new Scanner(System.in);
@@ -334,5 +334,48 @@ public class TasksExercises {
             }
         }
         return true;
+    }
+
+    //-----------------------------------------------------
+    //12.Write an application that "stutters", that is, reads the user's text (type String), and prints
+    //the given text, in which each word is printed twice.
+    //For example, for the input: "This is my test" the application should print "This This is is
+    //my my test test".
+
+    public void stutters() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Type your word: ");
+
+        String text = scanner.nextLine();
+        String[] words = text.split(" ");//initializam un array cu split
+
+        System.out.println("Stutter");
+
+        for (int i = 0; i < words.length - 1; i++) {
+            System.out.println(words[i] + " " + words[i] + " ");
+        }
+        System.out.println(words[words.length - 1] + " " + words[words.length - 1] + " ");
+    }
+
+    //teste string-------------------------
+    public void testString() {
+        String s1 = "abc", s2 = "abc", s3 = new String("abc");
+        System.out.println(s1 == s2);
+        System.out.println(s1 == s3);
+        System.out.println(s1.equals(s3));
+    }
+
+
+    //test objects
+    public void testObjects() {
+        Dog dog1 = new Dog("Azorel");
+        dog1.setName("Azorel");
+
+        Dog dog2 = new Dog("Azorel");
+        dog2.setName("Azorel");
+
+        System.out.println(dog1 == dog2);           //ponteaza spre alte zone de memorie ==verifica referintele(sunt in steck) in cazul nostru dog1 si dog2
+        System.out.println(dog1.equals(dog2));    //eguals compara continutul
+        System.out.println(dog1.getName().equals(dog2.getName()));
     }
 }
