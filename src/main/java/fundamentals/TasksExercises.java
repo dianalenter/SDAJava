@@ -167,8 +167,12 @@ public class TasksExercises {
     //5.Write an application that will read texts (variables of the String type) until the user
 // gives the text "Enough!" and then writes the longest of the given texts (not including the
 // text "Enough!"). If the user does not provide any text, write "No text provided".
+
 //    public static void readTexts() {
 //
+
+
+
     public static void longestWorld() {
         System.out.println("Type your world: ");
         Scanner scanner = new Scanner(System.in);
@@ -188,7 +192,9 @@ public class TasksExercises {
 
     }
 
-    //sau
+
+//sau
+
     public static void longestWorld1() {
         System.out.println("Type your world: ");
         Scanner scanner = new Scanner(System.in);
@@ -319,6 +325,17 @@ public class TasksExercises {
         }
         return isPrimeNo;
 
+    }
+    private static boolean isPrime4(int nr) {
+        if (nr == 2) return true;
+        if (nr == 0 || nr == 1 || nr % 2 == 0) return false;
+
+        for (int i = 3; i * i <= nr; i += 2) { //verifica radical nr
+            if (nr % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     private static boolean isPrime3(int nr) {
