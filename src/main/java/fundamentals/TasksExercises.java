@@ -378,4 +378,5 @@ public class TasksExercises {
         System.out.println(dog1.equals(dog2));    //eguals compara continutul
         System.out.println(dog1.getName().equals(dog2.getName()));
     }
+
 }
