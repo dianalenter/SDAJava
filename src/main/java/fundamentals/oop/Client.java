@@ -1,5 +1,7 @@
 package fundamentals.oop;
 
+import java.util.Arrays;
+
 /**
  * Client  which consists of:
  * constructor: with arguments: name and cnp (for initializing the fields and the  bankingAccount array will be initialized with an empty array or only instantiated)
@@ -41,11 +43,6 @@ public class Client {
         this.bankAccount = new BankAccount();      //instantiem cu new
     }
 
-    public String toString() {
-        return "Name = " + this.name + " ,CNP =  " + this.cnp + " , Bank Account = " + this.bankAccount;
-
-    }
-
     public String getName() {
         return name;
     }
@@ -56,6 +53,16 @@ public class Client {
 
     public String getCnp() {
         return cnp;
+    }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "name='" + name + '\'' +
+                ", cnp='" + cnp + '\'' +
+                ", bankAccount=" + bankAccount +
+                ", bankAccounts=" + Arrays.toString(bankAccounts) +
+                '}';
     }
 
     public void setCnp(String cnp) {

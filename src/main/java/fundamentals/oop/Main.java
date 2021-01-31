@@ -30,7 +30,7 @@ public class Main {
         BankAccount[] clientBankAcounts = client1.getBankAccounts();
         System.out.println(clientBankAcounts[0]);
         System.out.println(client1.getBankAccounts()[0]);
-
+        System.out.println(client1);
 
      /*   System.out.println("input client's name: "); //introducem de la tastatura noul client
         String name = scanner.next();
