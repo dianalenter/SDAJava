@@ -102,6 +102,7 @@ public class Client {
         System.out.println("Error: There isn't a saving account.");
         return null;
     }
+
     // removeAccountByType (takes a string argument which represents the type of the account to be removed from the array
 // * and prints a success message if the operations succeeded or error message if not - where the account did not exist
 // * in the array)
@@ -109,7 +110,7 @@ public class Client {
         boolean removed = false;
         for (int i = 0; i < this.bankAccounts.length; i++) {
             if (this.bankAccounts[i].getType().equals(accountType)) {
-                this.bankAccounts[i] = new BankAccount("","");
+                this.bankAccounts[i] = new BankAccount("", "");
                 System.out.println("Account removed succesfully.");
                 removed = true;
             }
@@ -118,3 +119,4 @@ public class Client {
             System.out.println("Error: This type of banking account does not exist.");
         }
     }
+}
