@@ -43,6 +43,16 @@ public class Client {
         this.bankAccount = new BankAccount();      //instantiem cu new
     }
 
+    @Override
+    public String toString() {
+        return "Client{" +
+                "name='" + name + '\'' +
+                ", cnp='" + cnp + '\'' +
+                ", bankAccount=" + bankAccount +
+                ", bankAccounts=" + Arrays.toString(bankAccounts) +
+                '}';
+    }
+
     public String getName() {
         return name;
     }
@@ -55,16 +65,6 @@ public class Client {
         return cnp;
     }
 
-    @Override
-    public String toString() {
-        return "Client{" +
-                "name='" + name + '\'' +
-                ", cnp='" + cnp + '\'' +
-                ", bankAccount=" + bankAccount +
-                ", bankAccounts=" + Arrays.toString(bankAccounts) +
-                '}';
-    }
-
     public void setCnp(String cnp) {
         this.cnp = cnp;
     }
@@ -74,6 +74,47 @@ public class Client {
     }
 
     public void setBankAccount(BankAccount bankAccount) {
-        this.bankAccount =bankAccount;
+        this.bankAccount = bankAccount;
     }
-}
+
+    //1.addBankAccount( takes one argument, bankAccount obj - if there already exists a banking
+    // account of the same type in the array an error message is printed)
+    public void addBankAccount(BankAccount bankAccount) {
+        int index = 0;
+        for (int i = 0; i < 2; i++) {
+            if (this.bankAccounts[i].getType().equals(bankAccount.getType())) {
+                System.out.println("Error: This type of banking account already exists.");
+                return;
+            }
+            index = i;
+        }
+        this.bankAccounts[index] = bankAccount;
+    }
+
+    //2.getSavingAccount( returns the bankAccount obj of type SAVING from the array, if there isn’t a saving account
+    // a null object is return along with printing an error message)
+    public BankAccount getSavingAccount() {
+        for (int i = 0; i < this.bankAccounts.length; i++) {
+            if (this.bankAccounts[i].getType().equals("SAVING")) {
+                return bankAccounts[i];
+            }
+        }
+        System.out.println("Error: There isn't a saving account.");
+        return null;
+    }
+    // removeAccountByType (takes a string argument which represents the type of the account to be removed from the array
+// * and prints a success message if the operations succeeded or error message if not - where the account did not exist
+// * in the array)
+    public void removeAccountByType(String accountType) {
+        boolean removed = false;
+        for (int i = 0; i < this.bankAccounts.length; i++) {
+            if (this.bankAccounts[i].getType().equals(accountType)) {
+                this.bankAccounts[i] = new BankAccount("","");
+                System.out.println("Account removed succesfully.");
+                removed = true;
+            }
+        }
+        if (removed == false) {
+            System.out.println("Error: This type of banking account does not exist.");
+        }
+    }
