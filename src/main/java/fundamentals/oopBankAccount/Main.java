@@ -1,4 +1,4 @@
-package fundamentals.oop;
+package fundamentals.oopBankAccount;
 
 import java.util.Scanner;
 

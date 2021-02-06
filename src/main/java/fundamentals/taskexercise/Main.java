@@ -1,6 +1,6 @@
-package fundamentals;
+package fundamentals.taskexercise;
 
-import java.util.Scanner;
+import fundamentals.taskexercise.TasksExercises;
 
 public class Main {
     public static void main(String[] args) {

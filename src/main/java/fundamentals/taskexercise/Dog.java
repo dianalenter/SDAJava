@@ -1,4 +1,4 @@
-package fundamentals;
+package fundamentals.taskexercise;
 
 public class Dog {
     private String name;

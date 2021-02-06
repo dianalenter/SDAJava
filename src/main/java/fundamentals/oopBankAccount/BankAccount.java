@@ -1,4 +1,4 @@
-package fundamentals.oop;
+package fundamentals.oopBankAccount;
 
 /**
  * Write an application that contains the following classes:
